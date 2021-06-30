@@ -1,0 +1,141 @@
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  overflow-x: hidden;
+}
+
+section {
+  min-height: 500px;
+  scroll-margin-top: 50px;
+}
+
+hr {
+  width: 200px;
+  border-top: 3px solid #666;
+}
+
+/* navbar */
+.nav-link {
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* jumbotron */
+@keyframes animationJb {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.jumbotron {
+  background-image: url('img/jumbotron2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  background-attachment: fixed;
+  overflow: hidden;
+  position: relative;
+}
+
+.jumbotron .container-fluid {
+  position: relative;
+  z-index: 2;
+}
+
+.jumbotron::after {
+  content: '';
+  display: block;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  bottom: 0;
+}
+
+.jumbotron img {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  transform: translateY(-180%);
+}
+
+.jumbotron img.muncul {
+  animation: animationJb 2s alternate-reverse infinite;
+}
+
+.jumbotron p,
+.jumbotron h1 {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.jumbotron h1 {
+  transform: translateX(-200px);
+  transition: all 0.8s;
+  opacity: 0;
+}
+
+.jumbotron h1.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.jumbotron p {
+  transform: translateX(200px);
+  transition: all 0.8s;
+  opacity: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.jumbotron p.tampil {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about h2,
+.contact h2 {
+  color: #333;
+}
+/* about */
+.about p {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  color: #555;
+  line-height: 1.8;
+}
+
+p.left,
+p.right {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s;
+}
+
+p.right {
+  transform: translateX(100px);
+}
+
+p.left.muncul,
+p.right.muncul {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* portoflio */
+.portfolio {
+  background: #eee;
+}
+
+/* contact */
+.contact ul li p {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  color: #555;
+}
+
+footer {
+  height: 80px;
+  line-height: 80px;
+}
